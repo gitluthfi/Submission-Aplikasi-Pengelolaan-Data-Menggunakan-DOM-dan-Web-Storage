@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Bookshelf</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script> -->
+  </head>
+  <body>
+    <header><h1>Bookshelf</h1></header>
+    <main>
+      <div class="wrapper" id="wrapper">
+        <div class="addBook" id="addBook">
+          <h2 class="head-addBook" id="head-addBook">Tambahkan Buku anda</h2>
+          <form class="form bg-blue" action="#" id="form">
+            <div class="form-wrap" id="form-wrap">
+              <label for="title">Judul Buku</label>
+              <input
+                type="text"
+                id="title"
+                class="title"
+                required
+                placeholder="Judul"
+              />
+            </div>
+            <div class="form-wrap" id="form-wrap">
+              <label for="author">Penulis Buku</label>
+              <input
+                type="text"
+                id="author"
+                class="author"
+                required
+                placeholder="Penulis"
+              />
+            </div>
+            <div class="form-wrap" id="form-wrap">
+              <label for="date">Tahun Terbit</label>
+              <input
+                type="number"
+                id="date"
+                class="year"
+                required
+                maxlength="4"
+              />
+            </div>
+            <div class="check-wrap" id="check-wrap">
+              <input type="checkbox" class="isRead" id="isRead" name="isRead" />
+              <label for="isRead">Sudah Selesai dibaca</label>
+            </div>
+            <div>
+              <button type="submit" class="submitButton" id="submitButton">
+                Simpan Buku
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="searchBar">
+          <form id="formSearch" action="" method="post">
+            <div class="form-wrap">
+              <label for="pencarian">
+                <h3>Cari Buku</h3>
+                <marquee behavior="" direction="left"
+                  ><p>Masukan Judul, Penulis, atau Tahun terbit</p></marquee
+                >
+              </label>
+              <input type="text" name="pencarian" id="pencarian" />
+            </div>
+            <button type="submit" class="searchButton" id="searchButton">
+              <i>Cari Buku</i>
+            </button>
+            <button
+              type="reset"
+              class="resetSearchButton"
+              id="resetSearchButton"
+            >
+              <i>Reset pencarian</i>
+            </button>
+          </form>
+          <div class="searchResult" id="searchResult"></div>
+        </div>
+      </div>
+      <div class="wrapper-container">
+        <div class="container-toRead">
+          <h2 class="container-header">Belum dibaca</h2>
+          <div class="list-book" id="unfinished-read"></div>
+        </div>
+        <div class="container-isRead">
+          <h2 class="container-header">Sudah dibaca</h2>
+          <div class="list-book" id="finished-read"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>Submission Belajar Membuat Front-End Web untuk Pemula</h3>
+      <p>
+        &copy; <a href="https://www.linkedin.com/in/rmluthfi/"><i>Luthfi</i></a>
+      </p>
+    </footer>
+  </body>
+</html>
